@@ -1,12 +1,6 @@
 ﻿array=Array.new(10){ rand(100) }
-max=0;
-i=0
-array.each do |el|
-	puts "#{i}-ый элемент = #{el}"
-	i+=1
-	if max<el
-		max=el
-		
-	end
+array.each_index do |i|
+  puts "#{i}-ый элемент = #{array[i]}"
 end
+max=array.max
 puts "#{max}"
